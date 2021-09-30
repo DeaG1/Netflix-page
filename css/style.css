@@ -1,0 +1,98 @@
+:root{
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+
+*{ /*RESET DE CONFIG DO PADDING, MARGIN AND BOX-SIZING DA PÁGINA*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*elementos base*/
+
+body{
+    background-color: var(--preto);
+    font-family: 'Times New Roman' Times, serif;
+    color: white;
+}
+
+header .container{
+    display: flex; /*permite utilizar o flex-box, que aí permite o alinhamento dos elementos em tela em linha*/
+    /*flex-direction: row; -> ao utilizar o display:flex, esse comando flex-direction:row; é aplicado de forma padrão, então é meio que obrigatório esse comando ser aplicado ao dizer que o display é flex*/
+    align-items: center; /*alinha os elementos de maneira vertical */
+    justify-content:space-between ; /*alinha os elementos de maneira horizontal */
+}
+
+header .logo{
+    color: var(--vermelho);
+    font-family: 'Arial Black',Times,serif;
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+header nav a{
+    text-decoration: none;
+    color:#AAA;
+    margin-right:10px;
+}
+
+header nav a:hover{
+    color:#FFF;
+}
+
+/*filme principal*/
+.filme-principal{
+    font-size:16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),url("/img/capa-house.jpg");
+    /*linear gradient insere uma "fumaça" na imagem/texto... escolhida*/
+
+    height: 400px;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column; /*essas duas funções colocam o botão em linha*/
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo{
+    font-size: 60px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.5);
+    border: none;
+    color:white;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .50s ease all;
+}
+
+.botao:hover{
+    background-color: white;
+    color:black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
